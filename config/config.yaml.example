@@ -1,0 +1,30 @@
+prod_to_dr:
+  servers:
+    source:
+      protocol: ntlm
+      domain: tableau.example.com
+      host: 10.0.1.1
+      user: tableaurun
+      password: changeme
+      tableau:
+        install_dir: C:/Program Files/Tableau/Tableau Server
+        app_data_dir: C:/ProgramData/Tableau/Tableau Server
+        version: 10.1
+    target:
+      protocol: ntlm
+      domain: tableau.example.com
+      host: 10.0.1.2
+      user: tableaurun
+      password: changeme
+      tableau:
+        install_dir: C:/Program Files/Tableau/Tableau Server
+        app_data_dir: C:/ProgramData/Tableau/Tableau Server
+        version: 10.1
+  rescue_env:
+    ip: 10.0.0.1
+    rescue_user: centos
+    is_sudoer: true
+    rescue_dir: /var/lib/tableau_dr
+    postgres:
+      port: 5432
+      password: changeme

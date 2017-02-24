@@ -1,0 +1,15 @@
+# after changing requirements, freeze them with:
+# pypi2nix -V 2.7 -r requirements.txt -E "libkrb5 libxml2 libxslt"
+
+nose==1.3.7
+PyYAML==3.10
+pywinrm==0.2.2
+docopt==0.6.2
+python-crontab==2.1.1
+requests-kerberos==0.11.0
+psutil==5.0.1
+multiprocessing==2.6.2.1
+PyInstaller==3.2.1
+requests-ntlm==1.0.0
+bs4==0.0.1
+lxml==3.2.1
